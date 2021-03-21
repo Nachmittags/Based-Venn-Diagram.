@@ -1,0 +1,23 @@
+//GENERATES AN ARRAY RUNS VENNDIAGRAM FUNCTION.
+
+function testgenerator(arraysize,sizeofeacharray)
+    {
+    m=[]
+    for(let x=0; x<arraysize; x++)
+        {
+        m.push([])
+        for(let z=0; z<sizeofeacharray; z++)
+            {
+            mm=Math.floor((Math.random()*sizeofeacharray*10+1)-1)
+            while(m[x].includes(mm))
+                {
+                mm=Math.floor((Math.random()*sizeofeacharray+2)-1)
+                }
+            m[x].push(mm)
+            }
+        }
+    console.log("Arrays:")
+    console.log(m)
+    console.log("Outcome")
+    VennDiagram(m)
+    }
